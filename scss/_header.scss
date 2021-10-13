@@ -69,17 +69,19 @@
                     transition: 0.3s;
                     .basket {
                         position: relative;
-                    }
-                    .basket::after {
-                        content: "";
                         display: block;
+                        background: none;
+                        cursor: pointer;
+                        color: $color-white;
+                    }
+                    .basket-counter {
                         position: absolute;
                         width: 19px;
                         height: 19px;
                         background: $color-pink;
                         border-radius: 50%;
                         top: -5px;
-                        right: -42px;
+                        right: -8px;
                     }
                     .menu-burger {
                         @include flex(center, center);

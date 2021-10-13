@@ -91,11 +91,6 @@ img {
   display: block;
 }
 
-body {
-  height: 100%;
-  width: 100%;
-}
-
 a,
 a:visited {
   text-decoration: none;
@@ -240,18 +235,20 @@ ul li {
 
 .top-menu-container-right-list-item .basket {
   position: relative;
+  display: block;
+  background: none;
+  cursor: pointer;
+  color: #ffffff;
 }
 
-.top-menu-container-right-list-item .basket::after {
-  content: "";
-  display: block;
+.top-menu-container-right-list-item .basket-counter {
   position: absolute;
   width: 19px;
   height: 19px;
   background: #f16d7f;
   border-radius: 50%;
   top: -5px;
-  right: -42px;
+  right: -8px;
 }
 
 .top-menu-container-right-list-item .menu-burger {

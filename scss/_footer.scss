@@ -1,0 +1,31 @@
+.f-bottom {
+    background: $color-dark-2;
+    padding: 24px 0;
+    &-container {
+        @include flex(space-between, center);
+        &-rights {
+            font-weight: normal;
+            font-size: 16px;
+            color: $color-text-light;
+        }
+        &-socials {
+            display: flex;
+            a {
+                @include flex(center, center);
+                margin-right: 7px;
+                width: 32px;
+                height: 32px;
+                background: white;
+            }
+            a:hover {
+                background: $color-pink;
+                svg {
+                    fill: white;
+                }
+            }
+            a:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

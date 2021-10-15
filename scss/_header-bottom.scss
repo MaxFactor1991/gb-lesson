@@ -1,0 +1,35 @@
+.header-bottom {
+    width: 100%;
+    background: $color-header-bot;
+    min-height: 148px;
+    &-container {
+        @include flex(space-between, center);
+        padding: 60px 0;
+        &-title {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: $color-pink;
+            text-transform: uppercase;
+        }
+        &-breadcrumb {
+            &-item {
+                display: inline;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                color: $color-pink;
+                text-transform: uppercase;
+                a {
+                    font-weight: 300;
+                    color: $color-grey-2;
+                }
+            }
+            &-item + &-item::before {
+                content: "/";
+                color: $color-grey-2;
+                font-weight: 300;
+            }
+        }
+    }
+}

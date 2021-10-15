@@ -15,6 +15,9 @@ $color-card: #f8f8f8;
 $color-icon: #e8e8e8;
 $color-btn-sub: #e05c6e;
 $color-menu-item: #6f6e6e;
+$color-header-bot: #f8f3f4;
+$color-grey-2: #636363;
+$color-pink-active: #ef5b70;
 @mixin flex($jc, $ai) {
     display: flex;
     justify-content: $jc;

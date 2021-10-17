@@ -67,6 +67,9 @@
                 &-item {
                     margin-right: 33px;
                     transition: 0.3s;
+                    &:last-child {
+                        margin-right: 0;
+                    }
                     .basket {
                         position: relative;
                         display: block;

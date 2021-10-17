@@ -409,3 +409,11 @@
         color: $color-pink-active;
     }
 }
+
+/*Product*/
+.card-box-product {
+    padding-top: 10px;
+    &-for-card {
+        margin: 33px -15px 110px -15px;
+    }
+}

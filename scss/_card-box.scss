@@ -310,76 +310,75 @@
                     transform: rotate(180deg);
                 }
             }
-
-            #size-list {
-                display: none;
-            }
-
-            .size-block {
-                display: none;
-                .container-input-size {
-                    margin-bottom: 7px;
-                    position: relative;
-                    input[type="checkbox"] {
-                        display: none;
-                    }
-                    .size-title {
-                        padding-left: 22px;
-                        cursor: pointer;
-                    }
-                    .size-title::before {
-                        content: "";
-                        display: inline-block;
-                        position: absolute;
-                        width: 13px;
-                        height: 13px;
-                        border: 1px solid #ebebeb;
-                        top: 0;
-                        left: 0;
-                    }
-                    #xs:checked ~ .size-title-xs::before {
-                        background: $color-pink-active;
-                        border: none;
-                    }
-                    #s:checked ~ .size-title-s::before {
-                        background: $color-pink-active;
-                        border: none;
-                    }
-                    #m:checked ~ .size-title-m::before {
-                        background: $color-pink-active;
-                        border: none;
-                    }
-                    #l:checked ~ .size-title-l::before {
-                        background: $color-pink-active;
-                        border: none;
-                    }
-                }
-                .container-input-size:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-
-        #size-list:checked ~ .size-block {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            width: 80px;
-            max-height: 100px;
-            padding: 7px 9px 11px 9px;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16px;
-            color: $color-menu-item;
-            text-transform: uppercase;
-            background: $color-white;
-            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-            z-index: 4;
         }
     }
     &-item:last-child {
         margin-right: 0;
     }
+}
+#size-list {
+    display: none;
+}
+
+.size-block {
+    display: none;
+    .container-input-size {
+        margin-bottom: 7px;
+        position: relative;
+        input[type="checkbox"] {
+            display: none;
+        }
+        .size-title {
+            padding-left: 22px;
+            cursor: pointer;
+        }
+        .size-title::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border: 1px solid #ebebeb;
+            top: 0;
+            left: 0;
+        }
+        #xs:checked ~ .size-title-xs::before {
+            background: $color-pink-active;
+            border: none;
+        }
+        #s:checked ~ .size-title-s::before {
+            background: $color-pink-active;
+            border: none;
+        }
+        #m:checked ~ .size-title-m::before {
+            background: $color-pink-active;
+            border: none;
+        }
+        #l:checked ~ .size-title-l::before {
+            background: $color-pink-active;
+            border: none;
+        }
+    }
+    .container-input-size:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#size-list:checked ~ .size-block {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 80px;
+    max-height: 100px;
+    padding: 7px 9px 11px 9px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-menu-item;
+    text-transform: uppercase;
+    background: $color-white;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    z-index: 4;
 }
 .card-box-container-catalog {
     padding-top: 0;

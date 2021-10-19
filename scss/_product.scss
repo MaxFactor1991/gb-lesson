@@ -90,7 +90,7 @@
                 font-size: 18px;
                 line-height: 22px;
                 text-transform: uppercase;
-                color: #4D4D4D;
+                color: #4d4d4d;
                 margin: 27px 0 48px 0;
             }
             &-desc {
@@ -120,9 +120,14 @@
             @include flex(initial, center);
             flex-direction: column;
             &-choose {
-                @include flex(center, center);
+                @include flex(center, initial);
                 &-item {
                     margin-right: 23px;
+                    #size-list:checked ~ .size-block {
+                        position: relative;
+                        margin-bottom: 20px;
+                        margin-top: 10px;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }

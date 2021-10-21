@@ -18,8 +18,11 @@ $color-menu-item: #6f6e6e;
 $color-header-bot: #f8f3f4;
 $color-grey-2: #636363;
 $color-pink-active: #ef5b70;
-$color-bg-product: #F7F7F7;
-$color-product-desc: #5E5E5E;
+$color-bg-product: #f7f7f7;
+$color-product-desc: #5e5e5e;
+$color-cart-card: #575757;
+$color-grey-cart: #4a4a4a;
+
 @mixin flex($jc, $ai) {
     display: flex;
     justify-content: $jc;
@@ -40,4 +43,8 @@ body {
 
 .pink-text {
     color: $color-pink;
+}
+
+input:focus {
+    outline: 1px solid $color-pink;
 }

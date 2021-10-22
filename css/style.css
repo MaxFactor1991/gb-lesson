@@ -1512,11 +1512,21 @@ ul li {
 .card-box-container-for-card-item .card-add-button:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #000000;
-  border: none;
+  border: transparent;
 }
 
 .card-box-container-for-card-item .card-add-button:hover svg {
   fill: black;
+}
+
+.card-box-container-for-card-item .card-add-button:active {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid white;
+}
+
+.card-box-container-for-card-item .card-add-button:active svg {
+  fill: #ffffff;
 }
 
 .card-box-container-for-card-item .card:hover .card-add-button {

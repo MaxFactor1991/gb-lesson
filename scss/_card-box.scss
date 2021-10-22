@@ -92,9 +92,17 @@
                 &-add-button:hover {
                     background: rgba($color: white, $alpha: 0.8);
                     color: $color-text-black;
-                    border: none;
+                    border: transparent;
                     svg {
                         fill: black;
+                    }
+                }
+                &-add-button:active {
+                    background: transparent;
+                    color: $color-white;
+                    border: 1px solid white;
+                    svg {
+                        fill: $color-white;
                     }
                 }
                 &:hover .card-add-button {

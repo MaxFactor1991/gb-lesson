@@ -811,6 +811,8 @@ ul li {
   border: 1px solid #ff6a6a;
   color: #f26376;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .product .product-container-description-bottom-btn svg {

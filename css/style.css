@@ -1180,6 +1180,7 @@ ul li {
 
 .cart__container__formbox__adressbox #quote {
   display: none;
+  width: 100%;
   border: 1px solid #a4a4a4;
   font-weight: 300;
   font-size: 13px;

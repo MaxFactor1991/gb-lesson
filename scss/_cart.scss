@@ -9,6 +9,12 @@
             margin-right: 128px;
             &__products {
                 margin-bottom: 72px;
+                #delete-card-all {
+                    display: none;
+                }
+                #delete-card-all:checked ~ &__card {
+                    display: none;
+                }
                 #delete-card-1 {
                     display: none;
                 }
@@ -123,7 +129,10 @@
             }
             &__buttonbox {
                 @include flex(space-between, initial);
-                button {
+                &__del-button {
+                    display: block;
+                }
+                .btn-cart {
                     background: none;
                     padding: 17px 40px;
                     border: 1px solid #a4a4a4;
@@ -223,7 +232,7 @@
                     font-size: 13px;
                     line-height: 16px;
                     color: $color-dark;
-                    padding: 0 17px;
+                    padding: 10px 17px;
                     margin-top: 23px;
                     resize: none;
                 }

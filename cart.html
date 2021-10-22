@@ -104,6 +104,7 @@
             <div class="cart__container container">
                 <div class="cart__container__productbox">
                     <div class="cart__container__productbox__products">
+                        <input type="checkbox" id="delete-card-all">
                         <input type="checkbox" id="delete-card-1">
                         <input type="checkbox" id="delete-card-2">
                         <article class="cart__container__productbox__products__card card-1">
@@ -146,8 +147,10 @@
                         </article>
                     </div>
                     <div class="cart__container__productbox__buttonbox">
-                        <button name="clear">Clear shopping cart</button>
-                        <button name="continue">Continue shopping</button>
+                        <label for="delete-card-all"
+                            class="cart__container__productbox__buttonbox__del-button btn-cart">Clear
+                            shopping cart</label>
+                        <button name="continue" class="btn-cart">Continue shopping</button>
                     </div>
                 </div>
                 <form action="#" method="post" class="cart__container__formbox">

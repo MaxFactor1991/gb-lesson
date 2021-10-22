@@ -864,6 +864,14 @@ ul li {
   margin-bottom: 72px;
 }
 
+.cart__container__productbox__products #delete-card-all {
+  display: none;
+}
+
+#delete-card-all:checked ~ .cart__container__productbox__products__card {
+  display: none;
+}
+
 .cart__container__productbox__products #delete-card-1 {
   display: none;
 }
@@ -1029,7 +1037,11 @@ ul li {
           align-items: initial;
 }
 
-.cart__container__productbox__buttonbox button {
+.cart__container__productbox__buttonbox__del-button {
+  display: block;
+}
+
+.cart__container__productbox__buttonbox .btn-cart {
   background: none;
   padding: 17px 40px;
   border: 1px solid #a4a4a4;
@@ -1043,13 +1055,13 @@ ul li {
   cursor: pointer;
 }
 
-.cart__container__productbox__buttonbox button:hover {
+.cart__container__productbox__buttonbox .btn-cart:hover {
   background: #f16d7f;
   color: #ffffff;
   border: none;
 }
 
-.cart__container__productbox__buttonbox button:active {
+.cart__container__productbox__buttonbox .btn-cart:active {
   background: none;
   color: #000000;
   border: 1px solid #a4a4a4;
@@ -1173,7 +1185,7 @@ ul li {
   font-size: 13px;
   line-height: 16px;
   color: #222222;
-  padding: 0 17px;
+  padding: 10px 17px;
   margin-top: 23px;
   resize: none;
 }

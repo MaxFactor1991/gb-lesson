@@ -1,0 +1,195 @@
+.product {
+    &-img {
+        width: 100%;
+        min-height: 777px;
+        background-color: $color-bg-product;
+        border: 1px solid #eaeaea;
+        @include flex(center, center);
+        overflow: hidden;
+        position: relative;
+        img {
+            display: block;
+        }
+        &-slider-arrow {
+            @include flex(center, center);
+            width: 47px;
+            height: 47px;
+            background: rgba(42, 42, 42, 0.15);
+            position: absolute;
+            z-index: 5;
+            cursor: pointer;
+        }
+        .btn-product-right {
+            top: 365px;
+            right: 0;
+            &:hover {
+                svg {
+                    fill: $color-pink;
+                }
+            }
+            &:active {
+                svg {
+                    fill: rgb(218, 20, 86);
+                }
+            }
+        }
+        .btn-product-left {
+            top: 365px;
+            left: 0;
+            &:hover {
+                svg {
+                    fill: $color-pink;
+                }
+            }
+            &:active {
+                svg {
+                    fill: rgb(218, 20, 86);
+                }
+            }
+        }
+    }
+    .product-container {
+        position: relative;
+        top: -65px;
+        z-index: 5;
+        .product-padding-container {
+            border: 1px solid #eaeaea;
+            height: 100%;
+            padding: 64px 0;
+            background-color: white;
+        }
+        .product-desc-container {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        &-description-top {
+            @include flex(initial, center);
+            flex-direction: column;
+            &-category {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 63px;
+                    height: 3px;
+                    background: $color-pink-active;
+                    top: 29px;
+                    left: 43px;
+                }
+                &:hover {
+                    color: rgb(218, 20, 86);
+                }
+            }
+            &-title {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+                text-transform: uppercase;
+                color: #4d4d4d;
+                margin: 27px 0 48px 0;
+            }
+            &-desc {
+                max-width: 555px;
+                text-indent: 40px;
+                text-align: center;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: $color-product-desc;
+                margin-bottom: 32px;
+            }
+            &-price {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 29px;
+                color: $color-pink-active;
+            }
+        }
+        hr {
+            height: 1px;
+            background: #eaeaea;
+            margin: 64px 0;
+        }
+        &-description-bottom {
+            @include flex(initial, center);
+            flex-direction: column;
+            &-choose {
+                @include flex(center, initial);
+                &-item {
+                    margin-right: 23px;
+                    #size-list:checked ~ .size-block {
+                        position: relative;
+                        margin-bottom: 20px;
+                        margin-top: 10px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &-btn {
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: $color-menu-item;
+                        text-transform: uppercase;
+                        margin-bottom: 48px;
+                        background: none;
+                        cursor: pointer;
+                        svg {
+                            display: inline-block;
+                            margin-left: 9px;
+                            fill: $color-menu-item;
+                        }
+                        &:hover {
+                            color: $color-pink;
+                            svg {
+                                fill: $color-pink;
+                            }
+                        }
+                        &:active {
+                            color: rgb(218, 20, 86);
+                            svg {
+                                fill: rgb(218, 20, 86);
+                            }
+                        }
+                    }
+                }
+            }
+            &-btn {
+                background: $color-white;
+                @include flex(flex-start, center);
+                width: 212px;
+                height: 48px;
+                padding: 0 24px;
+                border: 1px solid #ff6a6a;
+                color: $color-pink-button;
+                cursor: pointer;
+                transition: 0.3s;
+                svg {
+                    display: block;
+                    margin-right: 23px;
+                    fill: $color-pink-active;
+                }
+                &:hover {
+                    background: $color-pink;
+                    color: $color-white;
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+                &:active {
+                    background: $color-white;
+                    color: $color-pink-button;
+                    svg {
+                        fill: $color-pink-active;
+                    }
+                }
+            }
+        }
+    }
+}

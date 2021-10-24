@@ -1,0 +1,50 @@
+$font-main: "Lato";
+$font-res: "Last_resort_regular";
+$font-rob: "Roboto";
+$color-dark: #222222;
+$color-pink-back: #f1e4e6;
+$color-pink: #f16d7f;
+$color-white: #ffffff;
+$color-text-card: #5d5d5d;
+$color-text-black: #000000;
+$color-text-light: #fbfbfb;
+$color-pink-button: #f26376;
+$color-dark-2: #222224;
+$color-grey: #e1e1e1;
+$color-card: #f8f8f8;
+$color-icon: #e8e8e8;
+$color-btn-sub: #e05c6e;
+$color-menu-item: #6f6e6e;
+$color-header-bot: #f8f3f4;
+$color-grey-2: #636363;
+$color-pink-active: #ef5b70;
+$color-bg-product: #f7f7f7;
+$color-product-desc: #5e5e5e;
+$color-cart-card: #575757;
+$color-grey-cart: #4a4a4a;
+
+@mixin flex($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+body {
+    font-family: $font-main;
+    width: 100%;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.pink-text {
+    color: $color-pink;
+}
+
+input:focus {
+    outline: 1px solid $color-pink;
+}

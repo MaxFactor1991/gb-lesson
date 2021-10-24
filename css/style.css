@@ -1482,6 +1482,10 @@ ul li {
   color: #000000;
 }
 
+.registration__container__loyalty {
+  margin-left: 22px;
+}
+
 .registration__container__loyalty__txt {
   margin: 22px 0;
 }

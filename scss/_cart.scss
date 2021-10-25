@@ -9,24 +9,6 @@
             margin-right: 128px;
             &__products {
                 margin-bottom: 72px;
-                #delete-card-all {
-                    display: none;
-                }
-                #delete-card-all:checked ~ &__card {
-                    display: none;
-                }
-                #delete-card-1 {
-                    display: none;
-                }
-                #delete-card-2 {
-                    display: none;
-                }
-                #delete-card-1:checked ~ .card-1 {
-                    display: none;
-                }
-                #delete-card-2:checked ~ .card-2 {
-                    display: none;
-                }
                 &__card {
                     @include flex(initial, initial);
                     width: 100%;
@@ -38,9 +20,14 @@
                     &:last-child {
                         margin-bottom: 0;
                     }
-                    img {
-                        display: block;
+                    &__img {
                         max-width: 262px;
+                        width: 100%;
+                        background: $color-text-light;
+                        img {
+                            display: block;
+                            max-width: 100%;
+                        }
                     }
                     &__desc {
                         @include flex(space-between, initial);

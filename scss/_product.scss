@@ -123,10 +123,10 @@
                 @include flex(center, initial);
                 &-item {
                     margin-right: 23px;
+                    position: relative;
                     #size-list:checked ~ .size-block {
-                        position: relative;
-                        margin-bottom: 20px;
-                        margin-top: 10px;
+                        position: absolute;
+                        top: -105px;
                     }
                     &:last-child {
                         margin-right: 0;

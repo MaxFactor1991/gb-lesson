@@ -1440,6 +1440,32 @@ ul li {
 
 .registration__container__form__btn:hover svg {
   fill: #f16d7f;
+  -webkit-animation: anim 0.5s infinite ease-in-out;
+          animation: anim 0.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes anim {
+  from {
+    margin-left: 20px;
+  }
+  50% {
+    margin-left: 30px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+
+@keyframes anim {
+  from {
+    margin-left: 20px;
+  }
+  50% {
+    margin-left: 30px;
+  }
+  to {
+    margin-left: 20px;
+  }
 }
 
 .registration__container__form__btn:active {
@@ -1452,10 +1478,10 @@ ul li {
   fill: #ffffff;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .registration__container__loyalty,

@@ -1,0 +1,89 @@
+.subscribe {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 97px 0 156px 0;
+    &-container {
+        @include flex(space-between, flex-end);
+        &-quote {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            &-text {
+                text-align: center;
+                margin-top: 30px;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                color: $color-dark-2;
+            }
+        }
+        &-input {
+            &-info {
+                margin-bottom: 32px;
+                text-align: center;
+                &-title {
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 167%;
+                    color: $color-dark-2;
+                    text-transform: uppercase;
+                }
+                &-text {
+                    font-weight: normal;
+                    font-size: 18px;
+                    color: $color-dark-2;
+                    text-transform: uppercase;
+                }
+            }
+            &-form {
+                position: relative;
+                &-mail {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $color-dark-2;
+                    background: #e1e1e1;
+                    width: 256px;
+                    height: 49px;
+                    border-radius: 200px 0px 0px 200px;
+                    -webkit-border-radius: 200px 0px 0px 200px;
+                    -moz-border-radius: 200px 0px 0px 200px;
+                    padding: 0 22px;
+                }
+                &-mail::placeholder {
+                    color: $color-dark-2;
+                    opacity: 0.67;
+                }
+                &-mail:focus-visible {
+                    outline: none;
+                }
+                &-button {
+                    background: $color-btn-sub;
+                    color: $color-white;
+                    width: 100px;
+                    height: 49px;
+                    border-radius: 0px 200px 200px 0px;
+                    -webkit-border-radius: 0px 200px 200px 0px;
+                    -moz-border-radius: 0px 200px 200px 0px;
+                    width: 100px;
+                    position: absolute;
+                    cursor: pointer;
+                    outline: none;
+                }
+                &-button:hover {
+                    background: $color-white;
+                    color: $color-btn-sub;
+                    border: 1px solid $color-btn-sub;
+                }
+                &-button:active {
+                    background: $color-btn-sub;
+                    color: $color-white;
+                    border: none;
+                }
+            }
+        }
+    }
+}

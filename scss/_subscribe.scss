@@ -10,7 +10,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 30%;
+            max-width: 360px;
             &-text {
                 text-align: center;
                 margin-top: 30px;
@@ -46,12 +46,13 @@
                     line-height: 17px;
                     color: $color-dark-2;
                     background: #e1e1e1;
-                    width: 256px;
+                    max-width: 356px;
+                    width: 100%;
                     height: 49px;
-                    border-radius: 200px 0px 0px 200px;
-                    -webkit-border-radius: 200px 0px 0px 200px;
-                    -moz-border-radius: 200px 0px 0px 200px;
-                    padding: 0 22px;
+                    border-radius: 200px 200px 200px 200px;
+                    -webkit-border-radius: 200px 200px 200px 200px;
+                    -moz-border-radius: 200px 200px 200px 200px;
+                    padding: 0 120px 0 20px;
                 }
                 &-mail::placeholder {
                     color: $color-dark-2;
@@ -72,6 +73,8 @@
                     position: absolute;
                     cursor: pointer;
                     outline: none;
+                    top: 0;
+                    right: 0;
                 }
                 &-button:hover {
                     background: $color-white;

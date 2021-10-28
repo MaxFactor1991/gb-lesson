@@ -144,7 +144,7 @@
             }
             .menu-catalog-list {
                 display: none;
-                position: fixed;
+                position: absolute;
                 padding: 16px 16px 16px 33px;
                 background: white;
                 top: 75px;
@@ -236,8 +236,11 @@
                         }
                     }
                 }
+                .hidden-item {
+                    display: none;
+                }
             }
-            #menu-open:checked ~ .menu-catalog-list {
+            #menu-open:checked~.menu-catalog-list {
                 display: flex;
                 flex-direction: column;
             }

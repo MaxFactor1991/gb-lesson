@@ -1,7 +1,6 @@
 .banner {
     background: $color-pink-back;
     width: 100%;
-    min-height: 764px;
     &-container {
         @include flex(flex-end, initial);
         background-image: url(../img/men.png);

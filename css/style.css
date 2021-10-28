@@ -2415,7 +2415,7 @@ ul li {
   margin-right: 0;
 }
 
-@media (max-width: 900px) {
+@media only all and (max-width: 900px) {
   .banner-container-info {
     margin: 290px 0 0 0;
   }
@@ -2427,7 +2427,7 @@ ul li {
   }
 }
 
-@media (max-width: 768px) {
+@media only all and (max-width: 768px) {
   .container {
     max-width: 766px;
     width: 100%;
@@ -2492,7 +2492,7 @@ ul li {
   }
 }
 
-@media (max-width: 600px) {
+@media only all and (max-width: 600px) {
   .top-menu-container-right-list-item {
     margin-right: 0;
   }
@@ -2520,7 +2520,7 @@ ul li {
   }
 }
 
-@media (max-width: 390px) {
+@media only all and (max-width: 390px) {
   .banner-container {
     background-size: cover;
   }
@@ -2529,7 +2529,7 @@ ul li {
   }
 }
 
-@media (max-width: 375px) {
+@media only all and (max-width: 375px) {
   .container {
     max-width: 363px;
   }

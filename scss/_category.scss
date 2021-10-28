@@ -1,0 +1,58 @@
+.category-box-wrapper {
+    padding-top: 65px;
+    margin: 0 -15px;
+    @include flex(space-between, flex-start);
+    flex-wrap: wrap;
+    .category-box {
+        @include flex(center, center);
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 30%;
+        flex-grow: 1;
+        margin: 15px;
+        min-height: 260px;
+        position: relative;
+        text-transform: uppercase;
+        &-description {
+            position: relative;
+            z-index: 2;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-white;
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .category-box::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(33, 22, 22, 0.7);
+    }
+    .category-box:hover::before {
+        background: rgba(33, 22, 22, 0.2);
+    }
+    .box-women {
+        background-image: url(../img/women.png);
+    }
+    .box-men {
+        background-image: url(../img/for_men.png);
+    }
+    .box-kids {
+        background-image: url(../img/kids.png);
+    }
+    .box-accesories {
+        background-image: url(../img/accesories.png);
+        min-height: 180px;
+    }
+}

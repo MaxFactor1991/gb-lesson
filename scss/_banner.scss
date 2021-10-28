@@ -1,0 +1,39 @@
+.banner {
+    background: $color-pink-back;
+    width: 100%;
+    &-container {
+        @include flex(flex-end, initial);
+        background-image: url(../img/men.png);
+        background-repeat: no-repeat;
+        background-position: -220px 0;
+        min-height: 764px;
+
+        &-info {
+            margin: 290px 97px 0 0;
+            text-transform: uppercase;
+            color: $color-dark;
+            position: relative;
+            &-title {
+                font-weight: 900;
+                font-size: 48px;
+                max-width: 400px;
+                line-height: 58px;
+            }
+            &-subtitle {
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 38px;
+            }
+        }
+        &-info::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 92px;
+            background-color: $color-pink;
+            position: absolute;
+            left: -30px;
+            top: 0;
+        }
+    }
+}

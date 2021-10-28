@@ -1,0 +1,225 @@
+@media only all and (max-width: 900px) {
+    .banner-container-info {
+        margin: 290px 0 0 0;
+    }
+    .category-box-wrapper {
+        .category-box {
+            margin: 10px;
+        }
+    }
+    .card-box-container-for-card-item {
+        margin: 8px;
+    }
+}
+
+@media only all and (max-width: 768px) {
+    .container {
+        max-width: 766px;
+        width: 100%;
+    }
+    .banner {
+        &-container {
+            min-height: 367px;
+            background-position: 0 0;
+            background-size: contain;
+            &-info {
+                margin: 138px 0;
+                &-title {
+                    font-size: 44px;
+                    line-height: 53px;
+                }
+                &-subtitle {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+    .card-box-container {
+        padding-top: 150px;
+        &-for-card {
+            margin: 57px -15px 17px -15px;
+        }
+    }
+    .category-box-wrapper {
+        padding-top: 20px;
+        .category-box {
+            min-height: 168px;
+        }
+        .box-accesories {
+            min-height: 116px;
+        }
+    }
+    .advantages {
+        padding: 0 0 64px 0;
+        &-container {
+            align-items: center;
+            flex-direction: column;
+            .advantages-card {
+                margin: 48px 0 0 0;
+            }
+        }
+    }
+    .subscribe {
+        &-container {
+            flex-direction: column;
+            align-items: center;
+            &-quote {
+                margin-bottom: 48px;
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 600px) {
+    .top-menu-container-right-list-item {
+        margin-right: 0;
+    }
+    .top-menu-container-right-list-item .basket,
+    .top-menu-container-right-list-item .menu-cabinet {
+        display: none;
+    }
+    .top-menu-container-right .menu-catalog-list .hidden-item {
+        display: block;
+    }
+    .banner-container-info {
+        text-shadow: 1px 1px 3px white;
+    }
+    .category-box-wrapper {
+        padding-top: 20px;
+        .category-box {
+            width: 25%;
+            &-description {
+                text-align: center;
+            }
+            &-title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 390px) {
+    .banner {
+        &-container {
+            background-size: cover;
+        }
+    }
+    .category-box-wrapper {
+        .category-box {
+            margin: 5px;
+        }
+    }
+}
+
+@media only all and (max-width: 375px) {
+    .container {
+        max-width: 363px;
+    }
+    .top-menu {
+        &-container {
+            &-left {
+                .top-search {
+                    &-input:focus {
+                        width: 150px;
+                        min-height: 35px;
+                        transition: width 1s ease;
+                        border: 1px solid white;
+                        outline: none;
+                        top: 50px;
+                        left: 0px;
+                        border-radius: 10px;
+                        padding: 0 10px;
+                        background-color: $color-dark;
+                    }
+                }
+            }
+        }
+    }
+    .banner {
+        &-container {
+            @include flex(center, center);
+            min-height: 363px;
+            background: none;
+            &-info {
+                margin-left: 27px;
+                &-title {
+                    font-size: 38px;
+                    line-height: 46px;
+                }
+                &-subtitle {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+            &-info::before {
+                height: 61px;
+                top: 7px;
+                left: -20px;
+            }
+        }
+    }
+    .category-box-wrapper {
+        padding-top: 64px;
+        .category-box {
+            width: 100%;
+            min-height: 245px;
+            margin-bottom: 32px;
+        }
+        .box-accesories {
+            min-height: 111px;
+        }
+    }
+    .card-box-container {
+        padding-top: 32px;
+        &-for-card {
+            margin: 64px 0 24px 0;
+            &-item {
+                margin: 0 0 16px 0;
+                .card {
+                    &-add-button {
+                        top: 30%;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .subscribe {
+        &-container {
+            &-quote {
+                &-text {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+            &-input {
+                &-info {
+                    &-text {
+                        font-size: 14px;
+                    }
+                }
+                &-form {
+                    &-mail {
+                        max-width: 240px;
+                    }
+                }
+            }
+        }
+    }
+    .f-bottom {
+        padding: 0;
+        &-container {
+            flex-direction: column-reverse;
+            &-socials {
+                margin: 40px 0;
+            }
+            &-rights {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+    }
+}

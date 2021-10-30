@@ -287,6 +287,9 @@
         &-item {
             margin-right: 48px;
             position: relative;
+            &:last-child {
+                margin-right: 25px;
+            }
             &-button,
             .size-button {
                 background: none;

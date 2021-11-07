@@ -1,0 +1,31 @@
+.advantages {
+    background: $color-dark-2;
+    padding: 103px 0;
+    &-container {
+        @include flex(space-between, flex-end);
+        .advantages-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 360px;
+            margin: 0 15px;
+            svg {
+                fill: $color-pink;
+            }
+            &-title {
+                margin: 25px 0 16px 0;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                color: $color-text-light;
+            }
+            &-description {
+                font-weight: 300;
+                font-size: 14px;
+                color: $color-text-light;
+                line-height: 17px;
+                text-align: center;
+            }
+        }
+    }
+}

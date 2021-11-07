@@ -1,0 +1,431 @@
+.card-box-container {
+    padding-top: 91px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title {
+        font-weight: normal;
+        font-size: 30px;
+        color: $color-dark;
+        margin-bottom: 6px;
+    }
+    &-description {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9f9f9f;
+        text-align: center;
+    }
+    &-for-card {
+        margin: 33px -15px;
+        @include flex(center, flex-start);
+        flex-wrap: wrap;
+        &-item {
+            margin: 15px;
+            .card {
+                display: block;
+                max-width: 360px;
+                background: $color-card;
+                position: relative;
+                &-view {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+                &-img-container {
+                    position: relative;
+                }
+                &-img-container::before {
+                    content: "";
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background: rgba(58, 56, 56, 0.86);
+                }
+                &-img {
+                    max-width: 100%;
+                }
+                &-content {
+                    padding: 25px 28px 20px 16px;
+                    &-title {
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: $color-text-black;
+                        text-transform: uppercase;
+                    }
+                    &-description {
+                        margin: 13px 0 18px 0;
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #5d5d5d;
+                    }
+                    .price {
+                        font-weight: normal;
+                        font-size: 16px;
+                    }
+                }
+                &-add-button {
+                    display: none;
+                    border: 1px solid white;
+                    padding: 13px;
+                    background: transparent;
+                    width: 139px;
+                    height: 44px;
+                    position: absolute;
+                    top: 188px;
+                    left: 111px;
+                    right: 188px;
+                    bottom: 111px;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $color-white;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+                &-add-button:hover {
+                    background: rgba($color: white, $alpha: 0.8);
+                    color: $color-text-black;
+                    border: transparent;
+                    svg {
+                        fill: black;
+                    }
+                }
+                &-add-button:active {
+                    background: transparent;
+                    color: $color-white;
+                    border: 1px solid white;
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+                &:hover .card-add-button {
+                    @include flex(space-between, center);
+                }
+            }
+            .card:hover .card-img-container::before {
+                display: block;
+            }
+        }
+    }
+    &-button {
+        display: block;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-pink-button;
+        width: 212px;
+        height: 48px;
+        background: none;
+        border: 1px solid $color-pink-button;
+        cursor: pointer;
+        margin-bottom: 95px;
+    }
+    &-button:hover {
+        color: $color-white;
+        background: $color-pink-button;
+        border: none;
+    }
+}
+
+/*catalog*/
+
+.filter {
+    padding: 50px 0 54px 0;
+    &-container {
+        @include flex(flex-start, flex-end);
+        position: relative;
+        #filter-open {
+            display: none;
+        }
+        .filter-button {
+            margin-right: 304px;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: $color-text-black;
+            text-transform: uppercase;
+            @include flex(initial, center);
+            cursor: pointer;
+            z-index: 5;
+            transition: 0.15s;
+            &-icon {
+                display: block;
+                background: none;
+                width: 15px;
+                height: 10px;
+                margin-left: 11px;
+                &-item {
+                    position: relative;
+                    display: block;
+                    width: 10px;
+                    height: 2px;
+                    left: 0;
+                    top: 4px;
+                    background: $color-text-black;
+                }
+                &-item::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 15px;
+                    height: 2px;
+                    left: 0;
+                    top: -4px;
+                    background: $color-text-black;
+                }
+                &-item::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 5px;
+                    height: 2px;
+                    left: 0;
+                    top: 4px;
+                    background: $color-text-black;
+                }
+            }
+        }
+        .filter-list {
+            display: none;
+            max-width: 360px;
+            width: 100%;
+            padding: 46px 16px 16px 16px;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            position: absolute;
+            top: 48px;
+            left: 15px;
+            z-index: 4;
+            background: $color-white;
+            &-item {
+                margin: 0 0 18px 16px;
+                &-subsection {
+                    display: none;
+                }
+                #category:checked ~ .filter-list-item-subsection {
+                    display: block;
+                }
+                #category:checked ~ .filter-list-item-button {
+                    color: $color-pink-active;
+                }
+                #category,
+                #brand,
+                #designer {
+                    display: none;
+                }
+                &-item:last-child {
+                    margin-bottom: 0;
+                }
+                &-button {
+                    padding: 10px 0;
+                    display: block;
+                    position: relative;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $color-menu-item;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid #ebebeb;
+                    position: relative;
+                    cursor: pointer;
+                }
+                &-button::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 5px;
+                    height: 37px;
+                    left: -11px;
+                    top: 0;
+                    background: $color-pink-active;
+                }
+                &-subsection {
+                    margin: 24px 0;
+                    .subsection-item {
+                        margin: 0 0 11px 17px;
+                        a {
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: $color-menu-item;
+                        }
+                        a:hover {
+                            color: $color-pink;
+                        }
+                        a:active {
+                            color: rgb(218, 20, 86);
+                        }
+                    }
+                    .subsection-item:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        #filter-open:checked ~ .filter-list {
+            display: block;
+        }
+        #filter-open:checked ~ .filter-button {
+            color: $color-pink-active;
+            .filter-button-icon {
+                &-item,
+                &-item::before,
+                &-item::after {
+                    background: $color-pink-active;
+                }
+            }
+        }
+    }
+    .sort-block {
+        @include flex(initial, flex-end);
+        &-item {
+            margin-right: 48px;
+            position: relative;
+            &:last-child {
+                margin-right: 25px;
+            }
+            &-button,
+            .size-button {
+                background: none;
+                cursor: pointer;
+                font-weight: normal;
+                font-size: 14px;
+                color: $color-menu-item;
+                text-transform: uppercase;
+                position: relative;
+                svg {
+                    display: block;
+                    margin-left: 10px;
+                    position: absolute;
+                    top: 6px;
+                    right: -20px;
+                }
+            }
+            &-button:hover,
+            .size-button:hover {
+                color: $color-pink;
+            }
+            &-button:active,
+            .size-button:active {
+                color: rgb(218, 20, 86);
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &-item:last-child {
+        margin-right: 0;
+    }
+}
+
+#size-list {
+    display: none;
+}
+
+.size-block {
+    display: none;
+    .container-input-size {
+        margin-bottom: 7px;
+        position: relative;
+        input[type="checkbox"] {
+            display: none;
+        }
+        .size-title {
+            padding-left: 22px;
+            cursor: pointer;
+        }
+        .size-title::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border: 1px solid #ebebeb;
+            top: 0;
+            left: 0;
+        }
+        #xs:checked ~ .size-title-xs::before {
+            background: $color-pink-active;
+            border: none;
+        }
+        #s:checked ~ .size-title-s::before {
+            background: $color-pink-active;
+            border: none;
+        }
+        #m:checked ~ .size-title-m::before {
+            background: $color-pink-active;
+            border: none;
+        }
+        #l:checked ~ .size-title-l::before {
+            background: $color-pink-active;
+            border: none;
+        }
+    }
+    .container-input-size:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#size-list:checked ~ .size-block {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 80px;
+    max-height: 100px;
+    padding: 7px 9px 11px 9px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-menu-item;
+    text-transform: uppercase;
+    background: $color-white;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    z-index: 4;
+}
+
+.card-box-container-catalog {
+    padding-top: 0;
+    .card-box-container-for-card-catalog {
+        margin-top: 0;
+    }
+}
+
+.pages {
+    display: inline-block;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    padding: 12px 16px;
+    margin-bottom: 96px;
+    a {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #c4c4c4;
+        padding: 0 10px;
+    }
+    a:first-child,
+    a:last-child {
+        padding: 0 5px;
+        color: $color-text-black;
+    }
+    .active {
+        color: $color-pink-active;
+    }
+}
+
+/*Product*/
+
+.card-box-product {
+    padding-top: 10px;
+    &-for-card {
+        margin: 33px -15px 110px -15px;
+    }
+}
